@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/especies.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Espécies ameaçadas de extinção no Brasil</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo"><h2>ECO<span>DATA</span></h2></div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li class="active"><a href="especies.html">Espécies</a></li>
+                    <li><a href="mapas.html">Mapas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="especies-container">
+                <div class="table-header">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" onkeyup="filtrarTexto()" placeholder="Pesquisar espécie, nome comum ou bioma...">
+                    </div>
+                    
+                    <div class="filter-box" style="margin-left: 15px;">
+                        <select id="filterGrupo" onchange="carregarDadosDoBanco()" style="padding: 8px; border-radius: 5px; border: 1px solid #ddd;">
+                            <option value="Todos">Todos os Grupos</option>
+                            <option value="Aves">Aves</option>
+                            <option value="Mamíferos">Mamíferos</option>
+                            <option value="Répteis">Répteis</option>
+                            <option value="Anfíbios">Anfíbios</option>
+                        </select>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn-green">Exportar Tabela</button>
+                        <button class="btn-green">Baixar Fichas (zip)</button>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table id="especiesTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Espécie</th>
+                                <th>Nome comum</th>
+                                <th>Grupo</th>
+                                <th>Categoria</th>
+                                <th>Bioma(s)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpoTabela">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    
+    <script src="js/especies.js"></script>
+
+</body>
+</html>

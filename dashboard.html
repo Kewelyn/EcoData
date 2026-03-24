@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Espécies ameaçadas de extinção no Brasil</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>ECO<span>DATA</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="especies.html">Espécies</a></li>
+                    <li><a href="mapas.html">Mapas</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Inspirado no ICMBio</p>
+            </div>
+        </aside>
+
+        <main class="dashboard">
+            <header class="top-bar">
+                <h1>Bem-vindo, Pesquisador</h1>
+                <p>Estatísticas em tempo real da fauna brasileira</p>
+            </header>
+
+            <section class="stats-row">
+                <div class="card-stat">
+                <h3>Total Aves</h3>
+                <p id="total-aves">10</p>
+                </div>
+                <div class="card-stat">
+                <h3>Total Mamíferos</h3>
+                <p id="total-mamiferos">10</p>
+                </div>
+                <div class="card-stat">
+                <h3>Total Répteis</h3>
+                <p id="total-repteis">10</p>
+                </div>
+            </section>
+
+            <section class="charts-row">
+                <div class="card-chart">
+                <h3>Status de Ameaça</h3>
+                <canvas id="graficoStatus"></canvas>
+                </div>
+                <div class="card-chart">
+                <h3>Distribuição por Bioma</h3>
+                <canvas id="graficoBiomas"></canvas>
+                </div>
+                <div class="card-chart">
+                <h3>Nível de ameaça por Bioma</h3>   
+                <canvas id="graficoBiomaStatus"></canvas>
+                </div>
+            </section>
+            </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/grafico.js"></script>
+
+</body>
+</html>

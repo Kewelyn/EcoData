@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/mapa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Espécies ameaçadas de extinção no Brasil</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>ECO<span>DATA</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="especies.html">Espécies</a></li>
+                    <li class="active"><a href="#">Mapas</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Inspirado no ICMBio</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="mapa-content">
+                <h3>Nível de Ameaça por Estado</h3>
+                <div class="canvas-container">
+                    <canvas id="mapa-brasil"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+    <script src="https://unpkg.com/chartjs-chart-geo@4.2.1/build/index.umd.min.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <script src="js/firebase-config.js"></script>
+</body>
+</html>

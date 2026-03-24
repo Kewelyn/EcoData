@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Espécies ameaçadas de extinção no Brasil</title>
+</head>
+<body>
+        <nav class="navegação">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <ul class="lista">
+                <li class="itemmenu"><a href="#">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#ajuda">Ajuda</a></li>
+                <li><input type="text" placeholder="Pesquisar..." class="pesquisa"></li>
+            </ul>
+        </nav>
+    <header class="inicio">
+        <h1 class="tituloinicio">Eco<span>Data</span></h1>
+        <p class="fraseinicio">Cada espécie perdida é uma história que nunca mais será contada.</p>
+        <button class="btn-hero">Obter tabela das espécies em extinção</button>
+    </header>
+
+    <section class="secao-sobre" id="sobre">
+        <div class="container-sessao">
+            <h2>Sobre o Projeto</h2>
+            <div class="conteudo-sobre">
+                <p>Este portal nasceu da necessidade de democratizar o acesso aos dados de conservação da biodiversidade brasileira. Através de visualizações interativas, buscamos sensibilizar a sociedade sobre o estado crítico de nossas espécies e incentivar políticas públicas de proteção ambiental.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-ajuda" id="ajuda">
+        <div class="container-sessao">
+            <h2>Como podemos ajudar?</h2>
+            <div class="grid-ajuda">
+                <div class="card-ajuda">
+                    <span class="emoji">🌱</span>
+                    <h3>Consumo Responsável</h3>
+                    <p>Escolha produtos com certificação ambiental e evite o desperdício.</p>
+                </div>
+                <div class="card-ajuda">
+                    <span class="emoji">🚜</span>
+                    <h3>Preservação de Habitats</h3>
+                    <p>Apoie leis que combatem o desmatamento ilegal e protegem nossos biomas.</p>
+                </div>
+                <div class="card-ajuda">
+                    <span class="emoji">🔍</span>
+                    <h3>Ciência Cidadã</h3>
+                    <p>Contribua com registros de fauna em plataformas de monitoramento biológico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carrossel-destaques">
+        <header class="cabecalho-destaque">
+            <h2 id="titulo-destaque">Espécies em destaque</h2>
+        </header>
+
+        <div class="container-slider">
+            <button class="seta seta-esquerda" aria-label="Slide anterior">&#10094;</button>
+
+            <div class="lista-cards">
+                
+                <article class="card-destaque">
+                    <figure class="moldura-foto">
+                        <img src="img/arara.jpg" alt="Ararinha-azul">
+                        <figcaption class="credito-foto">Crédito: João Luiz Rosetti Gasparini</figcaption>
+                    </figure>
+                    <div class="info-destaque">
+                        <h3 class="nome-comum">Ararinha-azul</h3>
+                        <p class="nome-cientifico"><em>Cyanopsitta spixii</em></p>
+                        <span class="status-conservacao menos-preocupante">Menos Preocupante (LC)</span>
+                    </div>
+                </article>
+
+                <article class="card-destaque">
+                    <figure class="moldura-foto">
+                        <img src="img/mico-leao-dourado.jpg" alt="Mico Leão Dourado">
+                        <figcaption class="credito-foto">Crédito: Rodrigo Lopes Ferreira</figcaption>
+                    </figure>
+                    <div class="info-destaque">
+                        <h3 class="nome-comum">Mico Leão Dourado</h3>
+                        <p class="nome-cientifico"><em>Leontopithecus rosalia</em></p>
+                        <span class="status-conservacao criticamente-perigo">Criticamente em Perigo (CR)</span>
+                    </div>
+                </article>
+
+                <article class="card-destaque">
+                    <figure class="moldura-foto">
+                        <img src="img/lagartixa-areia.jpg" alt="Lagartixa-da-areia">
+                        <figcaption class="credito-foto">Crédito: Rodrigo Lopes Ferreira</figcaption>
+                    </figure>
+                    <div class="info-destaque">
+                        <h3 class="nome-comum">Lagartixa-da-areia</h3>
+                        <p class="nome-cientifico"><em>Liolaemus lutzae</em></p>
+                        <span class="status-conservacao criticamente-perigo">Criticamente em Perigo (CR)</span>
+                    </div>
+                </article>
+            </div> <button class="seta seta-direita" aria-label="Próximo slide">&#10095;</button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="js/dados.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/grafico.js"></script>
+
+    <section class="secao-institucional">
+        <div class="container-institucional">
+            <div class="item-institucional">
+                <h4>Realização e Apoio</h4>
+                <div class="logo-box">
+                    <img src="img/logo.png" alt="Logo Realização">
+                    <img src="img/icmbio.png" alt="Logo ICMBio e MMA">
+                </div>
+                <p>Projeto inspirado no ICMBio, 2026. Sistema de Avaliação do Risco de Extinção da Biodiversidade – SALVE. Disponível em: https://salve.icmbio.gov.br/. Acesso em: 22 de mar. de 2026.</p></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-final">
+        <div class="container-footer">
+            <p>&copy; 2026 Monitoramento de Fauna Brasileira. Todos os direitos reservados.</p>
+            <div class="links-footer">
+                <a href="#">Privacidade</a> | <a href="#">Contato</a> | <a href="#">Fontes</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
