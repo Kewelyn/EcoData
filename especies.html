@@ -28,8 +28,8 @@
                         <input type="text" id="searchInput" onkeyup="filtrarTexto()" placeholder="Pesquisar espécie, nome comum ou bioma...">
                     </div>
                     
-                    <div class="filter-box" style="margin-left: 15px;">
-                        <select id="filterGrupo" onchange="carregarDadosDoBanco()" style="padding: 8px; border-radius: 5px; border: 1px solid #ddd;">
+                    <div class="filter-box">
+                        <select id="filterGrupo" onchange="carregarDadosDoBanco()">
                             <option value="Todos">Todos os Grupos</option>
                             <option value="Aves">Aves</option>
                             <option value="Mamíferos">Mamíferos</option>
@@ -39,8 +39,7 @@
                     </div>
 
                     <div class="actions">
-                        <button class="btn-green">Exportar Tabela</button>
-                        <button class="btn-green">Baixar Fichas (zip)</button>
+                        <button class="btn-green" onclick="exportarParaCSV()">Exportar Tabela</button>
                     </div>
                 </div>
 

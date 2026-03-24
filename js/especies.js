@@ -62,3 +62,47 @@ function filtrarTexto() {
 
 // 3. Inicialização
 document.addEventListener('DOMContentLoaded', carregarDadosDoBanco);
+
+function exportarParaCSV() {
+    // 1. Seleciona a tabela (especiesTable)
+    const tabela = document.getElementById("especiesTable");
+    if (!tabela) {
+        alert("A tabela ainda não foi carregada!");
+        return;
+    }
+
+    let csv = [];
+    const linhas = tabela.querySelectorAll("tr");
+
+    for (const linha of linhas) {
+        const colunas = linha.querySelectorAll("th, td");
+        const conteudoLinha = [];
+
+        for (const coluna of colunas) {
+            // Limpa o texto: remove quebras de linha e troca vírgulas por ponto-e-vírgula
+            // Isso evita que o CSV quebre as colunas errado
+            let texto = coluna.innerText.replace(/(\r\n|\n|\r)/gm, "").replace(/,/g, ";");
+            conteudoLinha.push(texto);
+        }
+        
+        // Junta as colunas com vírgula (formato CSV)
+        csv.push(conteudoLinha.join(","));
+    }
+
+    // 2. Transforma o array de strings em um arquivo (Blob)
+    // O "\ufeff" serve para o Excel entender caracteres especiais (acentos)
+    const csvFinal = "\ufeff" + csv.join("\n");
+    const blob = new Blob([csvFinal], { type: "text/csv;charset=utf-8;" });
+
+    // 3. Cria um link invisível para disparar o download
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    
+    link.setAttribute("href", url);
+    link.setAttribute("download", "especies_ameacadas_ecodata.csv");
+    link.style.visibility = 'hidden';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
